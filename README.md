@@ -9,40 +9,40 @@ Gu Y, Li J, Kang H, et al. Employing Molecular Conformations for Ligand-based Vi
 ```
 
 # Benchmark Dataset
-Download our released dataset files from google driver:
-https://drive.google.com/file/d/1mGNzxDVeczQzsxTPxIezUQWhOF5KRGE9/view?usp=sharing
-Then unzip the "data" folder to this repo. The files are as shown:
+Download our released dataset files from [google driver](https://drive.google.com/file/d/1mGNzxDVeczQzsxTPxIezUQWhOF5KRGE9/view?usp=sharing). Then unzip the ``data`` folder to this repo. The files are as shown:
 
->''data'' \
->>''molecules'' \
+>``data``
+>> * ``molecules`` \
   The molecular conformer SDF files.
->>''target'' \
+>> * ``target`` \
   The sub-datasets (CSV files) for specific targets, columns include 'Activity type', 'Ligand name', 'SMILES', 'Conformer_path', etc.
->>''molecule_structure.csv'' \
+>> * ``molecule_structure.csv`` \
   The mapping file for each molecule SMILES and its corresponding conformer path in 'data' folder.
 
+Our bioactivity prediction dataset is curated from "A consensus compound/bioactivity dataset for data-driven drug design and chemogenomics"(https://zenodo.org/record/6398019#.YwuT93ZByUk). The data preprocessing cases can be found in [data_preprocessing.ipynb](https://github.com/gu-yaowen/EquiVS/blob/main/data_preprocessing.ipynb).
+
 # EquiVS model
-![EquiVS](https://github.com/gu-yaowen/EquiVS/blob/master/model%20structure.png)
+![EquiVS](https://github.com/gu-yaowen/EquiVS/blob/main/model_structure.png)
 ## Environment Requirement
 * torch==1.8.0
 * dgl==0.5.2
 
-## Train or Eval EquiVS model
-    sh bash.sh
-    
-    
-    Main arguments:
-        -da: B-dataset C-dataset F-dataset R-dataset
-        -ag: Aggregation method for bag embedding [sum, mean, Linear, BiTrans]
-        -nl: The number of HeteroGCN layer
-        -tk: The topk similarities in heterogeneous network construction
-        -k : The topk filtering in instance predictor
-        -hf: The dimension of hidden feature
-        -ep: The number of epoches
-        -bs: Batch size
-        -lr: Learning rate
-        -dp: Dropout rate
-    For more arguments, please see main.py
-    
+## Train or evaluate EquiVS model
+Simply reproduce our model:
+```
+sh bash.sh
+```
+Note that the ``TARGET_processed`` folder will be created in ``data/task/`` to save molecular graphs (``dgl_graph.bin``) and labels (``info.pkl``). \
+OR:
+```
+python main.py -id {DEVICE_ID} -sp {SAVE_PATH} -se {SEED} -mo {MODE: train OR eval}
+```
+For more (general, training, and model) arguments, please see ``main.py``.
+
+The EquiVS model will automatically train on all stored sub-dataset in ``data/target`` folder. The training results, models, and predictions will be stored in ``result/{SAVE_PATH}`` folder. 
+
+## Optimal conformer discovery
+Please refer the model interpretation case in [model_interpret.ipynb](https://github.com/gu-yaowen/EquiVS/blob/main/model_interpret.ipynb).
+
 # Contact
-We welcome you to contact us (email: gu.yaowen@imicams.ac.cn) for any questions and cooperations.
+We welcome you to contact us (email: yg3191@nyu.edu) for any questions and cooperations.
