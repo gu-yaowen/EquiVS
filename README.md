@@ -5,11 +5,13 @@ Codes and data for "Employing Molecular Conformations for Ligand-based Virtual S
 If you make advantage of the EquiVS model and our benchmark dataset proposed in our paper, please consider citing the following in your manuscript:
 
 ```
-Gu Y, Li J, Kang H, et al. Employing Molecular Conformations for Ligand-based Virtual Screening with Equivariant Graph Neural Network and Deep Multiple Instance Learning[J]. 2023.
+Gu, Y.; Li, J.; Kang, H.; Zhang, B.; Zheng, S. Employing Molecular Conformations for Ligand-Based Virtual Screening with Equivariant Graph Neural Network and Deep Multiple Instance Learning. Molecules 2023, 28, 5982. https://doi.org/10.3390/molecules28165982
+        
+        
 ```
 
 # Benchmark Dataset
-Download our released dataset files from [google driver](https://drive.google.com/file/d/1mGNzxDVeczQzsxTPxIezUQWhOF5KRGE9/view?usp=sharing). Then unzip the ``data`` folder to this repo. The files are as shown:
+Download our released dataset files from [Google Drive](https://drive.google.com/file/d/1mGNzxDVeczQzsxTPxIezUQWhOF5KRGE9/view?usp=sharing). Then unzip the ``data`` folder to this repo. The files are as shown:
 
 >``data``
 >> * ``molecules`` \
