@@ -1,5 +1,5 @@
 # EquiVS
-![Hits](https://hits.dwyl.com/gu-yaowen/EquiVS.svg)
+![Visits Badge](https://img.shields.io/badge/dynamic/json?label=visits&query=$.message&color=blue&url=https://hits.dwyl.com/gu-yaowen/EquiVS.json)
 ![Downloads](https://img.shields.io/github/downloads/gu-yaowen/EquiVS/total.svg)
 
 Codes and data for "Employing Molecular Conformations for Ligand-based Virtual Screening with Equivariant Graph Neural Network and Deep Multiple Instance Learning"
