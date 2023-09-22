@@ -1,8 +1,8 @@
 # EquiVS
-Codes and data for "Employing Molecular Conformations for Ligand-based Virtual Screening with Equivariant Graph Neural Network and Deep Multiple Instance Learning"
-
 [![Views](https://img.shields.io/github/search/gu-yaowen/EquiVS/goto.svg)](https://github.com/gu-yaowen/EquiVS)
 [![Downloads](https://img.shields.io/github/downloads/gu-yaowen/EquiVS/total.svg)](https://github.com/gu-yaowen/EquiVS/releases)
+
+Codes and data for "Employing Molecular Conformations for Ligand-based Virtual Screening with Equivariant Graph Neural Network and Deep Multiple Instance Learning"
 
 # Reference
 If you make advantage of the EquiVS model and our benchmark dataset proposed in our paper, please consider citing the following in your manuscript:
